@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
-import AppRouter from "./providers/router/ui/app.router";
 import { MetaMaskContextProvider } from "../shared/hooks/use-meta-mask";
+import AppRouter from "./router/app.router";
 
 function App() {
   return (
