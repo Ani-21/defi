@@ -1,3 +1,4 @@
+import { Wallet } from "src/components/wallet";
 import { useMetaMask } from "src/shared/hooks/use-meta-mask";
 
 const MainPage = () => {
@@ -5,7 +6,12 @@ const MainPage = () => {
 
   return (
     <div>
-      <h1>{!hasProvider ? "Please, install provider" : "Connected"}</h1>
+      <h1>
+        {!hasProvider
+          ? "Please, install provider"
+          : "MetaMask provider is installed"}
+      </h1>
+      <Wallet />
     </div>
   );
 };

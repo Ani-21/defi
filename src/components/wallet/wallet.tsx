@@ -1,6 +1,7 @@
 import { useMetaMask } from "src/shared/hooks/use-meta-mask";
-import styles from "./wallet.module.scss";
 import { formatChainAsNum } from "src/shared/utils/format-digits";
+import { Card } from "src/ui/card";
+import styles from "./wallet.module.scss";
 
 const Wallet = () => {
   const { wallet } = useMetaMask();
@@ -8,15 +9,20 @@ const Wallet = () => {
   const { accounts, balance, chainId } = wallet;
 
   return (
-    <div className={styles.display}>
+    <Card>
+      <h1>
+        {wallet.accounts.length
+          ? "My Wallet"
+          : "Connect to wallet to see transactions"}
+      </h1>
       {wallet.accounts.length > 0 && (
-        <>
-          <h1>Account: {accounts[0]}</h1>
-          <h1>Balance: {balance}</h1>
-          <h1>Balance:{formatChainAsNum(chainId)}</h1>
-        </>
+        <div className={styles.content}>
+          <p>Account: {accounts[0]}</p>
+          <p>Balance: {balance}</p>
+          <p>Balance:{formatChainAsNum(chainId)}</p>
+        </div>
       )}
-    </div>
+    </Card>
   );
 };
 

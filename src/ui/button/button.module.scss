@@ -1,0 +1,17 @@
+.btn {
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  border-radius: 16px;
+  background: var(--gradient-3);
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+
+  &:hover {
+    opacity: 0.6;
+    transition: opacity 0.4s ease-out;
+  }
+}

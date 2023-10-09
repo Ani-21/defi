@@ -1,0 +1,55 @@
+@import "./colors.scss";
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+  --text-primary: white;
+  --gradient-3: linear-gradient(
+    86deg,
+    #d16ba5 -14.21%,
+    #ba83ca 15.03%,
+    #9a9ae1 43.11%,
+    #69bff8 74.29%,
+    #52cffe 90.94%,
+    #5ffbf1 111.44%
+  );
+
+  font-family: "Nunito";
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
