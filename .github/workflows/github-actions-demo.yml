@@ -13,6 +13,6 @@ jobs:
         with:
           node-version: 18.12.1
       - name: Install
-        run: npm run install
+        run: npm install
       - name: Lint
         run: npm run lint
