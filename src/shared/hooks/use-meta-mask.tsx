@@ -127,6 +127,7 @@ export const MetaMaskContextProvider = ({ children }: PropsWithChildren) => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useMetaMask = () => {
   const context = useContext(MetaMaskContext);
 
